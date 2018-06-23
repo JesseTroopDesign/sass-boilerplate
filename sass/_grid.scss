@@ -1,0 +1,73 @@
+.col{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin:0.45em;
+  background: $gray;
+}
+.col-100{
+    width: 100%;
+    flex-grow: 1;
+    padding: 0.5em;
+}
+.col-70{
+    width: 64%;
+    flex-grow: 1;
+    padding: 0.5em;
+}
+.col-50{
+  padding:0.5em;
+  flex-grow:1;
+  width: 48%;
+}
+.col-30{
+    width: 30%;
+    flex-grow: 1;
+    padding: 0.5em;
+}
+.col-33 {
+    padding: 0.5em;
+    flex-grow: 1;
+    width: 31%;
+}
+.col-25 {
+	width: 23%;
+	flex-grow: 1;
+	padding: 0.5em;
+}
+  @include desktop{
+    .col-33 {
+        width: 29%;
+    }
+    .col-25 {
+        width: 21%;
+    }
+  }
+  @include phablet {
+     .col-33{
+        width: 31%;
+     }
+     .col-70,
+     .col-30,
+     .col-25{
+        width: 48%;
+    }
+  }
+  @include big-tablet{
+     .col-33,
+     .col-70,
+     .col-50,
+     .col-30,
+     .col-25{
+        width: 47%;
+    }
+  }
+  @include mobile{
+     .col-70,
+     .col-50,
+     .col-33,
+     .col-30,
+     .col-25{
+        width: 100%;
+    }
+  }
